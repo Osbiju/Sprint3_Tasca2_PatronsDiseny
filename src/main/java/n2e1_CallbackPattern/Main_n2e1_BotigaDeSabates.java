@@ -6,14 +6,12 @@ public class Main_n2e1_BotigaDeSabates {
         PasarelaDePagament pasarelaDePagament = new PasarelaDePagament();
 
         Callback targeta = new TargetaCredit();
-        targeta.ferPagament();
-
         Callback paypal = new Paypal();
-        paypal.ferPagament();
-
         Callback compteBancaria = new CompteBancaria();
-        compteBancaria.ferPagament();
 
+        pasarelaDePagament.activarPasarela(targeta);
+        pasarelaDePagament.activarPasarela(paypal);
+        pasarelaDePagament.activarPasarela(compteBancaria);
 
 
     }
